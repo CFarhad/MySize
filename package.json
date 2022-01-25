@@ -1,0 +1,30 @@
+{
+  "name": "mysize",
+  "version": "0.1.0",
+  "description": "MySize is a library for media queries",
+  "main": "src/index.js",
+  "scripts": {
+    "build-css": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CFarhad/MySize.git"
+  },
+  "keywords": [
+    "media-query",
+    "media-query-js",
+    "css-variables"
+  ],
+  "author": "Farhad Bagheri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CFarhad/MySize/issues"
+  },
+  "homepage": "https://github.com/CFarhad/MySize#readme",
+  "dependencies": {
+    "json-to-css-variables": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

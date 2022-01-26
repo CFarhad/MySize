@@ -1,21 +1,23 @@
 const config = require('./sizes.config.json');
-const cssVariable = require("json-to-css-variables");
 const path = require('path');
 const fs = require('fs');
+const cssVariable = require('./lib/cssVaribales');
+const otherVariable = require('./lib/otherVariables');
 
-const css = cssVariable(config,{element: ":root",pretty:true});
+let langs = ["css","less","scss","stylus"];
+langs.map(lang=>{
+  let css;
+  css = lang === 'css' ? cssVariable(config,{pretty:true}) : otherVariable(config,{pretty:true,lang:lang});
+  if (!fs.existsSync(path.join(__dirname, `../build/${lang}`))) {
+    fs.mkdirSync(path.join(__dirname, '../build',`${lang}`),{recursive: true});
+  }
 
-const buildPath = path.join(__dirname, '../build/css/sizes.css');
+  
+  fs.writeFile(path.join(__dirname,"../build",lang,`media.${lang}`), css,(err)=> {
+      if (err) throw Error(err)
+  });
 
-// check directory build/css exists in previous folder
-if (!fs.existsSync(path.join(__dirname, '../build/css'))) {
-    fs.mkdirSync(path.join(__dirname, '../build','css'),{recursive: true});
-}
+})
 
-fs.writeFile(buildPath, css,(err)=> {
-    if (err) {
-        return console.log(err);
-    }
-    console.log("The file was saved!");
-});
+
 

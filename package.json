@@ -2,7 +2,7 @@
   "name": "mysize",
   "version": "0.1.0",
   "description": "MySize is a library for media queries",
-  "main": "src/index.js",
+  "main": "src/",
   "scripts": {
     "build-css": "nodemon src/index.js"
   },
@@ -21,9 +21,6 @@
     "url": "https://github.com/CFarhad/MySize/issues"
   },
   "homepage": "https://github.com/CFarhad/MySize#readme",
-  "dependencies": {
-    "json-to-css-variables": "^1.0.0"
-  },
   "devDependencies": {
     "nodemon": "^2.0.15"
   }

@@ -1,6 +1,8 @@
 {
-  "blackberry-z30":"360",
-  "blackberry-playbook":"600",
-  "galaxy-note-3": "360",
-  "galaxy-note-2": "360"
+  "600": "blackberry-playbook",
+  "360":[
+    "blackberry-z30",
+    "galaxy-note-3",
+    "galaxy-note-2"
+  ]
 }

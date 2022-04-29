@@ -49,4 +49,4 @@ const cssVariable = (json,options)=>{
 
 }
 
-module.exports = cssVariable;
+export default cssVariable;

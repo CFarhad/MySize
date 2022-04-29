@@ -32,4 +32,4 @@ const otherVariables = (json,options)=>{
       return css;
 }
 
-module.exports = otherVariables;
+export default otherVariables;
